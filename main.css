@@ -1,0 +1,56 @@
+/* debut du header */
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar{
+  background-color: #303189;
+
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color:#f1d145;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color:#3385d9;
+}
+
+#Apropos{
+  height: 30px;
+  background-color: #f1d145;
+  border-bottom: #303189;
+}
+
+.header{
+  margin-left: 330px;
+}
+.header1{
+  margin-left: 30px;
+
+}
+
+#panier {
+  margin-left: 20px;
+  position: relative;
+
+}
+
+#imagelicorne{
+background: url(images/gem-1539624_1280.png);
+background-size: cover;
+background-repeat: no-repeat;
+height: 500px;
+}
+
+.circle{
+    margin:10px;
+    width:100px;
+    background:#FF0000;
+    height:100px;
+    text-align:center;
+    border-radius:100px;
+    <strong>line-height: 90px; /* 100 - 10 */</strong>
+}
+
+/* fin du header laetitia */
