@@ -1,8 +1,4 @@
 /* debut du header */
-body {
-  height: 100%;
-  width: 100%;
-}
 
 .navbar{
   background-color: #303189;
@@ -32,25 +28,21 @@ body {
 
 #panier {
   margin-left: 20px;
-  position: relative;
+  position: absolute;
+  z-index: 1;
 
-}
-
-#imagelicorne{
-background: url(images/gem-1539624_1280.png);
-background-size: cover;
-background-repeat: no-repeat;
-height: 500px;
 }
 
 .circle{
     margin:10px;
     width:100px;
-    background:#FF0000;
+    background:#3385d9;
     height:100px;
     text-align:center;
-    border-radius:100px;
-    <strong>line-height: 90px; /* 100 - 10 */</strong>
+    'moz'border-radius:100px;
+    position: absolute;
+    z-index: 2;
+    line-height: 90px; /* 100 - 10 */
 }
 
 /* fin du header laetitia */
