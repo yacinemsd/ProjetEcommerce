@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
   background-color: white;
   font-family: "Krub", sans-serif;
@@ -7,6 +8,9 @@ header, footer{
   font-family: "Krub", sans-serif;
 }
 
+=======
+<<<<<<< HEAD
+>>>>>>> 21a01bd63c46b8c0578781f3add569ec2c62edc3
 /* debut du header */
 
 .navbar{
@@ -37,6 +41,7 @@ header, footer{
 
 #panier {
   margin-left: 20px;
+<<<<<<< HEAD
   position: relative;
 
 }
@@ -420,3 +425,133 @@ section .section-title {
 /* fin css footer */
 
 }
+=======
+  position: absolute;
+  z-index: 1;
+
+}
+
+.circle{
+    margin:10px;
+    width:100px;
+    background:#3385d9;
+    height:100px;
+    text-align:center;
+    'moz'border-radius:100px;
+    position: absolute;
+    z-index: 2;
+    line-height: 90px; /* 100 - 10 */
+}
+
+/* fin du header laetitia */
+=======
+/* Jeffen -----------------------------------------------------------*/
+/* POPUP */
+.modal .modal-dialog .modal-header, .modal .modal-dialog .modal-footer {
+  /* background-color: #c9e9ff; */
+}
+.btn{margin-bottom:15px;}
+/* /POPUP */
+.shopping-cart{
+	/* font-family: 'Montserrat', sans-serif; */
+}
+.scrollYClass {/*Scrollbar du panier */
+  height:322px;
+  overflow-y: scroll;
+}
+.shopping-cart .content{
+	background-color: white;
+}
+.shopping-cart .items{
+	margin: auto;
+}
+#infoEmptyCart{
+  font-size: 1.5rem;
+}
+#productImage{
+	width: 4rem;
+	height: auto;
+}
+#quantified{
+	color: #007bff;
+}
+.shopping-cart .items .product{
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.shopping-cart .items .product .info{
+	padding-top: 0px;
+	text-align: center;
+}
+.shopping-cart .items .product .info .product-name{
+	font-weight: 600;
+}
+.shopping-cart .items .product .info .product-name .product-info{
+	font-size: 18px;
+	margin-top: 15px;
+}
+.shopping-cart .items .product .info .product-name .product-info .value{
+	font-weight: 400;
+}
+.shopping-cart .items .product .info .quantity .quantity-input{
+    margin: auto;
+    width: 80px;
+}
+.shopping-cart .items .product .info .price{
+	margin-top: 15px;
+    font-weight: bold;
+    font-size: 22px;
+ }
+.shopping-cart .summary{
+	border-top: 2px solid #5ea4f3;
+    background-color: #f7fbff;
+    height: 100%;
+    padding: 30px;
+}
+.shopping-cart .summary h3{
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: 600;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.shopping-cart .summary .summary-item:not(:last-of-type){
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.shopping-cart .summary .text{
+	font-size: 1em;
+	font-weight: 600;
+}
+.shopping-cart .summary .price{
+	font-size: 1em;
+	float: right;
+}
+.shopping-cart .summary button{
+	margin-top: 20px;
+}
+@media (min-width: 768px) {
+	.shopping-cart .items .product .info {
+		padding-top: 25px;
+		text-align: left;
+	}
+	.shopping-cart .items .product .info .price {
+		font-weight: bold;
+		font-size: 16px;
+		top: 17px;
+	}
+	.shopping-cart .items .product .info .quantity {
+		text-align: center;
+	}
+	.shopping-cart .items .product .info .quantity .quantity-input {
+		padding: 4px 10px;
+		text-align: center;
+	}
+}
+
+
+/* /Jeffen ---------------------------------------------------------*/
+>>>>>>> jeffen
+>>>>>>> 21a01bd63c46b8c0578781f3add569ec2c62edc3
