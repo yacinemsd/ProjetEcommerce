@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Jonathan
 body{
   background-color: white;
   font-family: "Krub", sans-serif;
@@ -8,9 +11,12 @@ header, footer{
   font-family: "Krub", sans-serif;
 }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 21a01bd63c46b8c0578781f3add569ec2c62edc3
+=======
+>>>>>>> Jonathan
 /* debut du header */
 
 .navbar{
@@ -42,6 +48,9 @@ header, footer{
 #panier {
   margin-left: 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Jonathan
   position: relative;
 
 }
@@ -425,6 +434,7 @@ section .section-title {
 /* fin css footer */
 
 }
+<<<<<<< HEAD
 =======
   position: absolute;
   z-index: 1;
@@ -555,3 +565,5 @@ section .section-title {
 /* /Jeffen ---------------------------------------------------------*/
 >>>>>>> jeffen
 >>>>>>> 21a01bd63c46b8c0578781f3add569ec2c62edc3
+=======
+>>>>>>> Jonathan
