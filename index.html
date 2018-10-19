@@ -17,22 +17,19 @@
           Panier
         </button>
       </div>
+        <div class="col">
+          <button type="button" id="6" class="btn btn-primary addToCartBtn" data-toggle="modal" data-target="#cart">
+            Ajouter au panier6
+          </button>
+          <button type="button" id="1" class="btn btn-primary addToCartBtn" data-toggle="modal" data-target="#cart">
+            Ajouter au panier1
+          </button>
+        </div>
     </div>
   </div>
-
-
-
-  <!-- fin navbar -->
-
-
-
-  <!-- début corp site -->
-
-  <!--début carrousel-->
-  <!-- fin carrousel -->
   <!-- Modal -->
   <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-slideout modal-lg" role="document">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="cartContent">Votre commande</h5>
@@ -41,57 +38,34 @@
           </button>
         </div>
         <div class="modal-body">
-          <main class="page">
-            <section class="shopping-cart dark">
-              <div class="container">
-                <div class="content">
-                  <div class="row">
-                    <div class="col-md-12 col-lg-8">
-                      <div class="items">
-                        <div class="product">
-                          <div class="row">
-                            <div class="col-md-3"><img class="img-fluid mx-auto d-block image" src="image.jpg" alt="product_image"></div>
-                            <div class="col-md-8">
-                              <div class="info">
-                                <div class="row">
-                                  <div class="col-md-5 product-name">
-                                    <div class="product-name">
-                                      <a href="#">Produit</a>
-                                      <div class="product-info">
-                                        <!-- A récupérer dans la liste de produits  -->
-                                        <div>Spec1 : <span class="value">valeur1</span></div>
-                                        <div>Spec2 : <span class="value">valeur2</span></div>
-                                        <div>Spec3 : <span class="value">valeur3</span></div>
-                                        <!-- A récupérer dans la liste de produits  -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4 quantity">
-                                    <label for="quantity">Quantité :</label>
-                                    <input id="quantity" type="number" value ="1" class="form-control quantity-input">
-                                  </div>
-                                  <div class="col-md-3 price">
-                                    <span>€</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+        <!-- CONTENEUR DU PANIER -->
+        <main class="page">
+          <section class="shopping-cart dark">
+            <div class="container">
+              <div class="content">
+                <div class="row">
+                  <div class="col-md-12 col-lg-8 scrollYClass">
+                    <div class="items">
+                      <p id="infoEmptyCart"></p>
+                      <div class="product" id="product"><!-- L'INJECTION SE PASSE ICI -->
+                        <!-- CONTENU AJOUTE PAR LE JS -->
                       </div>
                     </div>
-                    <div class="col-md-12 col-lg-4">
-                      <div class="summary">
-                        <h3>Résumé</h3>
-                        <div class="summary-item"><span class="text">Sous-total</span><span class="price">$360</span></div>
-                        <div class="summary-item"><span class="text">Total</span><span class="price">$360</span></div>
-                      </div>
+                  </div>
+                  <div class="col-md-12 col-lg-4">
+                    <div class="summary">
+                      <h3>Résumé</h3>
+                      <div class="summary-item"><span class="text">Sous-total</span><span class="price">0 €</span></div>
+                      <div class="summary-item"><span class="text">Total</span><span class="price">0 €</span></div>
+                      <div class="shipping">Les frais de port sont compris.</div>
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
-          </main>
+            </div>
+          </section>
+        </main>
+        <!-- !CONTENEUR DU PANIER -->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -100,6 +74,16 @@
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <!-- fin navbar -->
+
+
+
+  <!-- début corp site -->
+
+  <!--début carrousel-->
+  <!-- fin carrousel -->
+
   <!-- début sidebar-->
   <!-- fin sidebar -->
 
@@ -114,3 +98,27 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!-- <div class="row">
+  <div class="col-md-3"><img id="productImage" class="img-fluid mx-auto d-block image" src="#" alt="product_image"></div>
+  <div class="col-md-8">
+    <div class="info">
+      <div class="row">
+        <div class="col-md-5 product-name">
+          <div class="product-name">
+            <a href="#" id="productName">Produit</a>
+            <div class="product-info" id="productInfo">
+              <div>Spec1 : <span class="value">valeur1</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 quantity">
+          <label for="quantity">Quantité :</label>
+          <input id="quantity" type="number" value ="1" class="form-control quantity-input">
+        </div>
+        <div class="col-md-3 price">
+          <span id="priceWithQuantity"></span>0<span> €</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
