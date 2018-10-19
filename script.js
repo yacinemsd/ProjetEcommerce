@@ -1,4 +1,6 @@
 
+// partie Jonjon
+
 $( "input[type=radio]" ).on( "click",function(){
   var choice = document.querySelector("input[name=choice]:checked").value;
  $("#transmut").text("Prix : " + choice+" €");
@@ -68,3 +70,5 @@ new CBPFWTabs( document.getElementById( 'tabs' ) );
 	window.CBPFWTabs = CBPFWTabs;
 
 })( window );
+
+// fin partie Jonjon
