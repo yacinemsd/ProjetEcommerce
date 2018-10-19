@@ -150,7 +150,72 @@
 </div>
 </div>
 <!--fin du carousel  -->
-
+!--  début navbar -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">
+        Panier
+      </button>
+    </div>
+      <div class="col">
+        <button type="button" id="6" class="btn btn-primary addToCartBtn" data-toggle="modal" data-target="#cart">
+          Ajouter au panier6
+        </button>
+        <button type="button" id="1" class="btn btn-primary addToCartBtn" data-toggle="modal" data-target="#cart">
+          Ajouter au panier1
+        </button>
+      </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartContent">Votre commande</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <!-- CONTENEUR DU PANIER -->
+      <main class="page">
+        <section class="shopping-cart dark">
+          <div class="container">
+            <div class="content">
+              <div class="row">
+                <div class="col-md-12 col-lg-8 scrollYClass">
+                  <div class="items">
+                    <p id="infoEmptyCart"></p>
+                    <div class="product" id="product"><!-- L'INJECTION SE PASSE ICI -->
+                      <!-- CONTENU AJOUTE PAR LE JS -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                  <div class="summary">
+                    <h3>Résumé</h3>
+                    <div class="summary-item"><span class="text">Sous-total</span><span class="price">0 €</span></div>
+                    <div class="summary-item"><span class="text">Total</span><span class="price">0 €</span></div>
+                    <div class="shipping">Les frais de port sont compris.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- !CONTENEUR DU PANIER -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-primary">Valider</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
 
 
 
