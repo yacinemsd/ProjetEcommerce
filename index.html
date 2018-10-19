@@ -5,32 +5,241 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
   <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-  <!--  début navbar -->
 
-  <!-- fin navbar -->
+<!-- debut catalogue -->
 
+<div class="container" id="catalog">
+    		<div id="tabs" class="tabs">
+				<nav>
+					<ul>
+						<li><a href="#section-1" class="icon-cup"><span><img class="picto" src="images/flask.svg" alt="pictopotion"/>Elixirs</span></a></li>
+						<li><a href="#section-2" class="icon-food"><span><img class="picto" src="images/unicorn.svg" alt="pictocreature"/>Créatures</span></a></li>
+						<li><a href="#section-3" class="icon-lab"><span><img class="picto" src="images/spell.svg" alt="pictoparchemin"/>Formules magiques</span></a></li>
+						<li><a href="#section-4" class="icon-truck"><span><img class="picto" src="images/witch-flying.svg" alt="pictoaccess"/>Accessoires</span></a></li>
+					</ul>
+				</nav>
+				<div class="content">
+					<section id="section-1">
+            <p class="attention">Attention de bien lire les instructions fournies et prendre conscience de tous les effets de nos potions proposées.</br>La boutique décline toute responsabilité en cas de mauvais usage.</p>
+						<div class="mediabox">
+							<img src="images/amour.jpg" alt="img01" />
+							<h3>Potion d’amour</h3>
+							<p>La personne qui boira cette potion tombera instantanément amoureuse du premier être vivant qu’elle verra et ce jusqu’à la fin de ses jours. À manipuler avec précaution.</p>
+              <p>Fiole de 50 mL</p>
+              <p>Prix : 40 €</p>
+              <button type="button" class="btn btn-primary" name="button" id="0">Ajouter au panier</button>
+						</div>
+						<div class="mediabox">
+							<img src="images/verite.jpg" alt="img02" />
+							<h3>Potion de vérité</h3>
+							<p>Une fois ingérée, toute parole qui sort de la bouche n’est que vérité pour une durée de  30 minutes.</p>
+              <p>Fiole de 20 mL</p>
+              <p>Prix : 30 €</p>
+              <button type="button" class="btn btn-primary" name="button" id="1">Ajouter au panier</button>
+						</div>
+            <div class="mediabox">
+              <img src="images/eternite.jpg" alt="img0" />
+              <h3>Potion d’éternité </h3>
+              <p> Cette potion possède peut-être un goût insupportable mais permet d’accéder à la vie éternelle.</br>Exclusivité de notre boutique.</p>
+              <p>Fiole de 30 mL</p>
+              <p>Prix : 1260 €</p>
+              <button type="button" class="btn btn-primary" name="button" id="3">Ajouter au panier</button>
+            </div>
+            <div class="mediabox">
+							<img src="images/mutation.jpg" alt="img03" />
+							<h3>Potion de transmutation</h3>
+							<p>Divers choix s’offrent à vous pour cette potion qui permet de se tranformer en l’un des animaux de la liste pour une durée de 30 minutes à 4 heures selon la dose (se référer à la notice fournie)</p>
+              <p>Fiole de 80 mL</p>
+              <div>
+                <input type="radio" id="chat" name="choice" value="28"><p class="radio">Chat</p></input>
+                <input type="radio" id="chauvesouris" name="choice" value="42"><p class="radio">Chauve-souris</p></input>
+                <input type="radio" id="rat" name="choice" value="28"><p class="radio">Rat</p></input>
+                <input type="radio" id="dragon" name="choice" value="97"><p class="radio">Dragon</p></input>
+              </div>
+              <p id="transmut">Prix : €</p>
+              <button type="button" class="btn btn-primary" name="button" id="2">Ajouter au panier</button>
+						</div>
+					</section>
+					<section id="section-2">
+						<div class="mediabox">
+							<img src="images/licorne.png" alt="img04" />
+							<h3>Licorne</h3>
+							<p>Animal solitaire à l’origine, toutes nos licornes sont élevées au contact de l’homme et peuvent même être montées pour les plus dociles. Possibilité de choisir la couleur sur demande et selon notre stock.</p>
+              <p> Prix : 800€</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-licorne-modal-lg">Accessoires</button>
+              <div class="modal fade bd-licorne-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <h3>Chamallows</h3>
+                    <p>Friandise préféré des licornes qui ne cesseront de vous en réclamer après y avoir goûter.</p>
+                    <img src="images/chamallows.jpg" alt="chamallow"/>
+                    <p>Prix : 29€ le kilo</p>
+                    <button type="button" class="btn btn-primary" name="button" id="9">Ajouter au panier</button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" name="button" id="4">Ajouter au panier</button>
+            </div>
+						<div class="mediabox">
+							<img src="images/dragon.jpeg" alt="img05" />
+							<h3>Dragon</h3>
+							<p>Récupérés par nos soins dans les terres oubliées des monts Oural dès leur plus jeune âge, nos dragons ne sont livrés qu’après un entretien poussé avec son futur maître, pour des raisons de sécurité évidentes.</p>
+              <p> Prix : 2500€</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-dragon-modal-lg">Accessoires</button>
+              <div class="modal fade bd-dragon-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <h3>Litière pour dragon</h3>
+                    <p>Retiens efficacement les odeurs de soufre.</p>
+                    <img src="images/litieredrag.jpg" alt="chamallow"/>
+                    <p>Prix : 17€ le sachet de 65 Kg</p>
+                    <button type="button" class="btn btn-primary" name="button" id="8">Ajouter au panier</button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" name="button" id="5">Ajouter au panier</button>
+            </div>
+						<div class="mediabox">
+							<img src="images/phoenix.png" alt="img06" />
+							<h3>Phoenix</h3>
+							<p>Majestueux, intelligent et surtout attachant, le phoenix est un animal très fidèle envers son maître mais qui aime aussi garder sa part d’indépendance et de liberté.</p>
+              <p> Prix : 700€</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-phoenix-modal-lg">Accessoires</button>
+              <div class="modal fade bd-phoenix-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <h3>Cendrier de renaissance</h3>
+                    <p>Pour sa renaissance, votre phoenix aura la joie de découvrir sa nouvelle vie dans ce joli cendrier douillet.</p>
+                    <img src="images/cendrier.jpg" alt="cendrier"/>
+                    <p>Prix : 120€</p>
+                    <button type="button" class="btn btn-primary" name="button" id="11">Ajouter au panier</button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" name="button" id="6">Ajouter au panier</button>
+            </div>
+            <div class="mediabox">
+  						<img src="images/griffon.jpg" alt="img02" />
+  						<h3>Griffon</h3>
+  						<p> Bien qu’impressionnant, le griffon reste un animal docile et facilement domesticable. Il pourra autant être pour vous un compagnon de jeu qu’un  redoutable garde du corps.</p>
+              <p> Prix : 1200€</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-griffon-modal-lg">Accessoires</button>
+              <div class="modal fade bd-griffon-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <h3>Lotion pour plumage</h3>
+                    <p>Toujours soucieux de son hygiène, votre griffon sera ravi de recevoir vos soins avec cette lotion qui fera briller son plumage.</p>
+                    <img src="images/lotion.jpg" alt="lotion"/>
+                    <p>Prix : 42€ la bouteille de 500mL</p>
+                    <button type="button" class="btn btn-primary" name="button" id="10">Ajouter au panier</button>
+                  </div>
+                </div>
+              </div>
+              <button type="button"class="btn btn-primary" name="button" id="7">Ajouter au panier</button>
+            </div>
+					</section>
+          <section id="section-3">
+            <p class="attention">Toutes nos formules sont livrés sur des parchemins scellés qui ne peuvent s’ouvrir qu’avec une formule qui vous sera envoyé par message sécurisé.</br>Celles-ci ne sont réutilisables qu’un nombre limité de fois.</p>
+            <div class="mediabox">
+              <img src="images/parchemin.jpg" alt="img03" />
+              <h3>Formule de téléportation</h3>
+              <p>Cette formule à laquelle vous rajouterait votre destination vous permettra de vous téléporter dans toutes les directions dans un rayon de 12km.</p>
+              <p>Réutilisable 12 fois</p>
+              <p> Prix : 92€</p>
+              <button type="button" class="btn btn-primary" name="button" id="16">Ajouter au panier</button>
+            </div>
+            <div class="mediabox">
+              <img src="images/parchemin.jpg" alt="img01" />
+              <h3>Formule d'invisibilité</h3>
+              <p>Encore en phase de développement, cette formule permet de rendre votre corps invisible pour une durée de 45 minutes. Attention, cette formule ne rend pas encore vos vêtements et accessoires invisibles bien que nous y travaillons d’arrache-pied.</p>
+              <p>Réutilisable 8 fois</p>
+              <p> Prix : 29€</p>
+              <button type="button" class="btn btn-primary" name="button" id="17">Ajouter au panier</button>
+            </div>
+            <div class="mediabox">
+              <img src="images/parchemin.jpg" alt="img04" />
+              <h3>Invocation de démon</h3>
+              <p>Cette formule est à manipuler avec précaution car elle permet d’invoquer aléatoirement l’un des 7 démons de l’apocalypse pour une durée de 7 heures.</br>Attention, ce sort n’est pas à mettre entre toute les mains !! </p>
+              <p>Réutilisable 7 fois</p>
+              <p> Prix : 777€</p>
+              <button type="button" class="btn btn-primary" name="button" id="18">Ajouter au panier</button>
+            </div>
+            <div class="mediabox">
+              <img src="images/parchemin.jpg" alt="img04" />
+              <h3>Formule de résurrection</h3>
+              <p>Cette formule indispensable à tout bon sorcier guérisseur n’est utilisable qu’une fois sur chaque âme mais redonne toute sa vitalité à l’être choisi.</p>
+              <p>Usage unique</p>
+              <p> Prix : 1990€</p>
+              <button type="button" class="btn btn-primary" name="button" id="19">Ajouter au panier</button>
+            </div>
+            <div class="mediabox">
+              <img src="images/parchemin.jpg" alt="img04" />
+              <h3>Formule de desenchantement</h3>
+              <p>Cette formule très pratique permet d’annuler tous les sorts et toutes les potions appilquées sur un unique individu choisi durant l’incantation.</p>
+              <p>Usage unique</p>
+              <p> Prix : 990€</p>
+              <button type="button" class="btn btn-primary" name="button" id="20">Ajouter au panier</button>
+            </div>
+          </section>
+          <section id="section-4">
+						<div class="mediabox">
+							<img src="images/balai.jpg" alt="img02" />
+							<h3>Balai magique</h3>
+							<p>D’une qualité artisanale exceptionnelle, ce balai volant peut atteindre les 120 km/h et grimper jusqu’à 1,2km d’altitude. De plus, pour plus de discrétion, vous pouvez vous en servir pour le ménage.</p>
+              <p> Prix : 170€</p>
+              <button type="button" class="btn btn-primary" name="button" id="12">Ajouter au panier</button>
+            </div>
+						<div class="mediabox">
+							<img src="images/cape.jpg" alt="img06" />
+							<h3>cape d'invisibilité</h3>
+							<p> Cette cape de grand standing est confectionnée dans un tissu enchanté de première qualité et vous permettra de vous esquiver de vos soirées mondaines ennuyeuses en toute discrétion.</p>
+              <p> Prix : 179€</p>
+              <button type="button" class="btn btn-primary" name="button" id="13">Ajouter au panier</button>
+            </div>
+            <div class="mediabox">
+              <img src="images/baguette.jpg" alt="img06" />
+              <h3>Baguette magique</h3>
+              <p> Outil indispensable pour exécuter tous vos sorts, réalisé dans une essence de bois venue d’une forêt enchantée tenue secrète.</p>
+              <p> Prix : 220€</p>
+              <button type="button" class="btn btn-primary" name="button" id="14">Ajouter au panier</button>
+            </div>
+						<div class="mediabox">
+							<img src="images/haricot.jpg" alt="img01" />
+							<h3>Haricots magiques bio</h3>
+							<p>Après de longues expérimentations, nous avons réussi à reproduire avec un procédé totalement naturel les fameux haricots magiques.</p>
+              <p>Temps de pousse : une à 2 nuit selon la météo</p>
+              <p> Prix : 79€ les 2 graines</p>
+              <button type="button" class="btn btn-primary" name="button" id="15">Ajouter au panier</button>
+              </div>
+					</section>
+				</div><!-- /content -->
+			</div><!-- /tabs -->
+		</div>
+		<script src="http://tympanus.net/Blueprints/FullWidthTabs/js/cbpFWTabs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+		<script>
+			new CBPFWTabs( document.getElementById( 'tabs' ) );
 
+      $( "input[type=radio]" ).on( "click",function(){
+        var choice = document.querySelector("input[name=choice]:checked").value;
+       $("#transmut").text("Prix : " + choice+" €");
+      })
+		</script>
 
-<!-- début corp site -->
-
-<!--début carrousel-->
-<!-- fin carrousel -->
-
-<!-- début sidebar-->
-<!-- fin sidebar -->
 
 <!-- fin catalogue -->
+
 <!-- fin corp site -->
 
 <!-- footer -->
 <!-- fin footer -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="script.js"></script>
 </body>
 </html>
