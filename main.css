@@ -1,6 +1,21 @@
+/* fleche retour haut de page */
+#lientop{
+outline: 0;
+margin-left: auto;
+}
+
+#flechetop{
+  color : #303189;
+  font-size: 3rem;
+}
+
+#flechetop:hover{
+  color: #f1d145;
+}
+
 /*css footer*/
 /* Footer */
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
 section {
     padding: 60px 0;
 }
@@ -96,5 +111,3 @@ section .section-title {
 }
 }
 /* fin css footer */
-
-}
