@@ -21,7 +21,7 @@ $(document).ready(function(){
       name: 'Potion d\'amour',
       description: 'La personne qui boira cette potion tombera instantanément amoureuse du premier être vivant qu’elle verra et ce jusqu’à la fin de ses jours. À manipuler avec précaution.',
       quantity: '50 ml',
-      imageUrl: 'images/amour.jpg',
+      imageUrl: 'images/amour.png',
       price: 40
     },
     {
@@ -29,7 +29,7 @@ $(document).ready(function(){
       name: 'Potion de vérité',
       description: 'Une fois ingérée, toute parole qui sort de la bouche n’est que vérité pour une durée de  30 minutes.',
       quantity: 'Flacon de 20 ml',
-      imageUrl: 'images/verite.jpg',
+      imageUrl: 'images/verité.png',
       price: 30,
     },
     {
@@ -38,7 +38,7 @@ $(document).ready(function(){
       description: 'Divers choix s’offrent à vous pour cette potion qui permet de se tranformer en l’un des animaux de la liste pour une durée de 30 minutes à 4 heures selon la dose (se référer à la notice fournie).',
       quantity: 'Flacon de 80 ml',
       type: typeInput,
-      imageUrl: 'images/eternite.jpg',
+      imageUrl: 'images/eternite.png',
       price: priceInput
     },
     {
@@ -46,7 +46,7 @@ $(document).ready(function(){
       name: 'Potion d’éternité',
       description: 'Cette potion possède peut-être un goût insupportable mais permet d’accéder à la vie éternelle. Disponible uniquement dans notre boutique.',
       quantity: 'Flacon de 30 ml',
-      imageUrl: 'images/mutation.jpg',
+      imageUrl: 'images/mutation.png',
       price: 1260
     },
     {
@@ -62,7 +62,7 @@ $(document).ready(function(){
       name: 'Dragon',
       description: 'Récupérés par nos soins dans les terres oubliées des monts Oural dès leur plus jeune âge, nos dragons ne sont livrés qu’après un entretien poussé avec son futur maître, pour des raisons de sécurité évidentes.',
       quantity: '1 adulte',
-      imageUrl: 'images/dragon.jpeg',
+      imageUrl: 'images/dragon.png',
       price: 2500
     },
     {
@@ -78,7 +78,7 @@ $(document).ready(function(){
       name: 'Griffon',
       description: 'Bien qu’impressionnant, le griffon reste un animal docile et facilement domesticable. Il pourra autant être pour vous un compagnon de jeu qu’un redoutable garde du corps.',
       quantity: '1 adulte',
-      imageUrl: 'images/griffon.jpg',
+      imageUrl: 'images/griffon.png',
       price: 1200
     },
     {
@@ -86,7 +86,7 @@ $(document).ready(function(){
       name: 'Litière pour dragon',
       description: 'Retiens efficacement les odeurs de soufres.',
       quantity: '65 Kg',
-      imageUrl: 'images/litieredrag.jpg',
+      imageUrl: 'images/litiere.png',
       price: 1200
     },
     {
@@ -94,7 +94,7 @@ $(document).ready(function(){
       name: 'Chamallows',
       description: 'Friandise préféré des licorne qui ne cesseront de vous en réclamer après y avoir goûter.',
       quantity: '1 Kg',
-      imageUrl: 'images/chamallows.jpg',
+      imageUrl: 'images/chamallows.png',
       price: 29
     },
     {
@@ -102,7 +102,7 @@ $(document).ready(function(){
       name: 'Lotion pour plumage de griffon',
       description: 'Toujours soucieux de son hygiène, votre griffon sera ravi de recevoir vos soins avec cette lotion qui fera briller son plumage.',
       quantity: '500 ml',
-      imageUrl: 'images/lotion.jpg',
+      imageUrl: 'images/lotion.png',
       price: 42
     },
     {
@@ -110,7 +110,7 @@ $(document).ready(function(){
       name: 'Cendrier pour phœnix',
       description: 'Pour sa renaissance, votre phoenix aura la joie de découvrir sa nouvelle vie dans ce joli cendrier douillet.',
       quantity: '1 pièce',
-      imageUrl: 'images/cendrier.jpg',
+      imageUrl: 'images/cendrier.png',
       price: 120
     },
     {
@@ -118,7 +118,7 @@ $(document).ready(function(){
       name: 'Balai magique',
       description: 'D’une qualité artisanale exceptionnelle, ce balai volant peut atteindre les 120 km/h et grimper jusqu’à 1,2km d’altitude. De plus, pour plus de discrétion, vous pouvez vous en servir pour le ménage.',
       quantity: '1 pièce',
-      imageUrl: 'images/balai.jpg',
+      imageUrl: 'images/balai.png',
       price: 170
     },
     {
@@ -126,7 +126,7 @@ $(document).ready(function(){
       name: 'Cape d’invisibilité',
       description: 'Cette cape de grand standing est confectionnée dans un tissu enchanté de première qualité et vous permettra de vous esquiver de vos soirées mondaines ennuyeuses en toute discrétion.',
       quantity: '1 pièce',
-      imageUrl: 'images/cape.jpg',
+      imageUrl: 'images/cape.png',
       price: 179
     },
     {
@@ -134,7 +134,7 @@ $(document).ready(function(){
       name: 'Baguette magique',
       description: 'Outil indispensable pour exécuter tous vos sorts, réalisé dans une essence de bois venue d’une forêt enchantée tenue secrète.',
       quantity: '1 pièce',
-      imageUrl: 'images/baguette.jpg',
+      imageUrl: 'images/baguette.png',
       price: 220
     },
     {
@@ -142,7 +142,7 @@ $(document).ready(function(){
       name: 'Haricots magiques bio',
       description: 'Après de longues expérimentations, nous avons réussi à reproduire avec un procédé totalement naturel les fameux haricots magiques.',
       quantity: '2 pièces - temps de pousse variable',
-      imageUrl: 'images/haricot.jpg',
+      imageUrl: 'images/haricots.png',
       price: 79
     },
     {
@@ -150,7 +150,7 @@ $(document).ready(function(){
       name: 'Formule de téléportation',
       description: 'Cette formule à laquelle vous rajouterait votre destination vous permettra de vous téléporter dans toutes les directions dans un rayon de 12km.',
       quantity: 'Utilisable 12 fois',
-      imageUrl: 'images/parchemin.jpg',
+      imageUrl: 'images/parchemin.png',
       price: 96
     },
     {
@@ -158,7 +158,7 @@ $(document).ready(function(){
       name: 'Formule d’invisibilité',
       description: 'Encore en phase de développement, cette formule permet de rendre votre corps invisible pour une durée de 45 minutes. Attention, cette formule ne rend pas encore vos vêtements et accessoires invisibles bien que nous y travaillons d’arrache-pied.',
       quantity: 'Utilisable 8 fois',
-      imageUrl: 'images/parchemin.jpg',
+      imageUrl: 'images/parchemin.png',
       price: 29
     },
     {
@@ -166,7 +166,7 @@ $(document).ready(function(){
       name: 'Invocation de démon',
       description: 'Cette formule est à manipuler avec précaution car elle permet d’invoquer aléatoirement l’un des 7 démons de l’apocalypse pour une durée de 7 heures. Attention, ce sort n’est pas à mettre entre toute les mains !!',
       quantity: 'Utilisable 7 fois',
-      imageUrl: 'images/parchemin.jpg',
+      imageUrl: 'images/parchemin.png',
       price: 777
     },
     {
@@ -174,7 +174,7 @@ $(document).ready(function(){
       name: 'Formule de résurrection',
       description: 'Cette formule indispensable à tout bon sorcier guérisseur n’est utilisable qu’une fois sur chaque âme mais redonne toute sa vitalité à l’être choisi.',
       quantity: 'Usage unique',
-      imageUrl: 'images/parchemin.jpg',
+      imageUrl: 'images/parchemin.png',
       price: 99
     },
     {
@@ -182,7 +182,7 @@ $(document).ready(function(){
       name: 'Formule de désenchantement',
       description: 'Cette formule très pratique permet d’annuler tous les sorts et toutes les potions appliqués sur un individu choisit durant l’incantation.',
       quantity: 'Usage unique',
-      imageUrl: 'images/parchemin.jpg',
+      imageUrl: 'images/parchemin.png',
       price: 99
     }
   ],

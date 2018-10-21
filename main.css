@@ -153,6 +153,33 @@ outline: 0;
 /* /Jeffen ----------------------------------------------------------------------*/
 /* début jonathan----------------------------------------------------------------*/
 /* catalogue Jonjon*/
+/* @font-face { */
+	/* font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?pvm5gj');
+	src:url('../fonts/icomoon/icomoon.eot?#iefixpvm5gj') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff?pvm5gj') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf?pvm5gj') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg?pvm5gj#icomoon') format('svg'); */
+	/* font-weight: normal;
+	/* font-style: normal; */
+} /* Icons created with icomoon.io/app */ */
+
+.flask:before {
+	content: url("images/flask.svg");
+}
+
+.unicorn:before {
+	content: url("images/unicor.svg");
+}
+
+.spell:before {
+	content: url("spell.svg");
+}
+
+.witch:before {
+	content: url("witch-flying.svg");
+}
+
 #catalog{
   background-color: white;
   padding: 10px;
