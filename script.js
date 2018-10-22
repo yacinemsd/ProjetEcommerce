@@ -3,10 +3,9 @@ new CBPFWTabs( document.getElementById( 'tabs' ) );
 // !partie Jonjon--------------------------------------------------------------------------------------------
 $(document).ready(function(){
 //partie Jeffen--------------------------------------------------------------------------------------------
-  // A SUPPRIMER POUR TESTER >>>>>>>
-  var cartItemAdded = true;
-  // <<<<<<<<A SUPPRIMER POUR TESTER
   var cartWrapper = $('#product');
+  var quantityProduct = 1;
+  var subTotal, total = 0;
   var priceInput = '';// viens de la sélection dans le panneau de commande pour les types de transformation
   var typeInput = '';// viens de la sélection dans le panneau de commande pour les types de transformation
   var products= [
@@ -14,7 +13,7 @@ $(document).ready(function(){
       id: 0,
       name: 'Potion d\'amour',
       description: 'La personne qui boira cette potion tombera instantanément amoureuse du premier être vivant qu’elle verra et ce jusqu’à la fin de ses jours. À manipuler avec précaution.',
-      quantity: '50 ml',
+      quantity: 'Flacon de 50 ml',
       imageUrl: 'images/amour.jpg',
       price: 40
     },
@@ -180,54 +179,76 @@ $(document).ready(function(){
       price: 99
     }
   ],
-  productsIdInCart = [];
+  productsInCart = [];
 
-  if(cartItemAdded==false){
-    $('#infoEmptyCart').text('Votre panier est vide.');
-  }
+  //Mise à jour du panier total et sous-total
+  function updateCart(){
+    var priceAddCart=0;
+    var subTotal, total = 0;
+    var priceByProduct=0;
+    for (i=0;i<productsInCart.length;i++){
+      // Va chercher tous les prix des produits, grâce à leurs ID, dans le panier  les multiplie par leur nombre et ajoute à la variable totale
+      priceByProduct = Number(products[productsInCart[i]].price)*Number($('#quantity'+productsInCart[i]).val());
+      total += priceByProduct;
+      subTotal += priceByProduct;
+      $('#price'+productsInCart[i]).text(priceByProduct+' €');
+    }
+    $('#subTotal').text(subTotal+' €');
+    $('#total').text(total+' €');
+  };
 
   //fonction servant à ajouter des produits dans le panier en fonction des variables passées en paramètre
   $(".addToCartBtn").click(function(){
     //Variable de récupération de l'ID du bouton cliqué (Ajouter au panier)
     var idProduct = $(this).attr('id');
-    alert($.inArray(idProduct, productsIdInCart[idProduct]));
-    // if (idProduct!=$.inArray($(this).attr('id'), productsIdInCart)&&productsIdInCart){//compare les id de l'objet cliqué s'ils existent déjà dans la liste
+    $('#infoEmptyCart').hide();//cache le texte panier vide
     //Extraction des informations de la liste la liste
     var urlById = products[idProduct].imageUrl;//adresse de l'image
     var nameById = products[idProduct].name;//nom du produit
     var quantityById = products[idProduct].quantity;//quantités (flacon,pièce,etc)
-    var descriptionById = products[idProduct].description;//descriptif
-    var smallDescriptById = descriptionById.slice(0, descriptionById.indexOf(' '))+'...';//descriptif réduit au premier mot de suivi de '...'
-    var priceById = products[idProduct].price;//prix
+    var priceById = products[idProduct].price;
     var productAdded = document.createElement('div');//Variable servant à créer le container pour l'injection html
-    productAdded.className = idProduct+'_productAdded';
-    productAdded.innerHTML = `<div class="row">
-                                <div class="col-md-3"><img id="productImage" class="img-fluid mx-auto d-block image" src="${urlById}" alt="product_image"></div>
-                                <div class="col-md-8">
-                                <div class="info">
-                                <div class="row">
-                                <div class="col-md-5 product-name">
-                                <div class="product-name"><a href="#">${nameById}</a>
-                                <div class="product-info">
-                                <div>Nombre : </div><div id="quantified">${quantityById}</div>
-                                <div>Détail : <a class="tooltip-test" href="#" title="${descriptionById}" >${smallDescriptById}</a></div>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-md-4 quantity">
-                                <label for="quantity">Quantité :</label><input id="quantity" type="number" value ="1" class="form-control quantity-input"></div>
-                                <div class="col-md-3 price"><span>${priceById} €</span></div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
+    //condition compare les id de l'objet cliqué s'ils existent déjà dans la liste ou si la liste de produits est vide
+    if (idProduct!=productsInCart[$.inArray(idProduct, productsInCart)]||productsInCart.length==0){
+      productAdded.className = 'productAdded-'+idProduct;
+      productAdded.innerHTML = `<div class="row">
+                                  <div class="col-md-3">
+                                    <img id="productImage" class="img-fluid mx-auto d-block image" src="${urlById}" alt="product_image"></div>
+                                    <div class="col-md-8">
+                                      <div class="info">
+                                        <div class="row">
+                                          <div class="col-md-5 product-name">
+                                            <div class="product-name"><a href="#">${nameById}</a>
+                                              <div class="product-info">
+                                              <div>Format : </div><div id="quantified">${quantityById}</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        <div class="col-md-4 quantity">
+                                          <label for="quantity">Quantité :</label><select id="quantity${idProduct}" name="quantity">
+                                          <option value="1" selected="selected">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                                          </select>
+                                        </div>
+                                        <div class="col-md-3 price" id="price${idProduct}"><span>${priceById} €</span><div class="delete-btn"></div></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 <div class="dropdown-divider"></div>`;
-    cartWrapper.append(productAdded);//Injection dans la page html au niveau de cartWrapper(id="product")
-    productsIdInCart.push(idProduct);
-    // } else {
-    //   $('#quantity').value++;
-    // }
+      cartWrapper.append(productAdded);//Injection dans la page html au niveau de cartWrapper(id="product")
+      quantityProduct = Number($('#quantity'+idProduct+' option:selected').text());//Récupération du nombre initial dans la sélection du nombre
+      productsInCart.push(idProduct);
+      $('#quantity'+idProduct).change(updateCart);// ajout de
+      updateCart();
+    } else {
+      quantityProduct++;
+      $('#quantity'+idProduct).val(quantityProduct);
+      priceById = priceById*quantityProduct;
+      $('#price'+idProduct).text(priceById+' €');
+      updateCart();
+    }
   });
+
   //fin partie Jeffen--------------------------------------------------------------------------------------------
   // partie Jonjon--------------------------------------------------------------------------------------------
 
@@ -297,10 +318,8 @@ $(document).ready(function(){
   // fin partie Jonjon
   //début partie Yacine--------------------------------------------------------------------------------------------
   // ===== Scroll haut de page ====
-  $(function(){
-  	$("#lientop").click(function(){
-      	$("html, body").animate({scrollTop: 0},"slow");
-      });
+  $("#lientop").click(function(){
+    $("html, body").animate({scrollTop: 0},"slow");
   });
   //fin partie Yacine--------------------------------------------------------------------------------------------
 });

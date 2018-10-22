@@ -50,7 +50,9 @@ outline: 0;
 .modal .modal-dialog .modal-header, .modal .modal-dialog .modal-footer {
   /* background-color: #c9e9ff; */
 }
-.btn{margin-bottom:15px;}
+.btn{
+  margin-bottom:15px;
+}
 /* /POPUP */
 .shopping-cart{
 	/* font-family: 'Montserrat', sans-serif; */
@@ -81,7 +83,7 @@ outline: 0;
 	padding-bottom: 20px;
 }
 .shopping-cart .items .product .info{
-	padding-top: 0px;
+	padding-top: 0;
 	text-align: center;
 }
 .shopping-cart .items .product .info .product-name{
