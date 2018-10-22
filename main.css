@@ -29,20 +29,6 @@ margin-right: 10px;
   border-bottom: #303189;
 }
 
-.header{
-  margin-left: 300px;
-}
-.header1{
-  margin-left: 30px;
-
-}
-
-#panier {
-  margin-left: 20px;
-  position: absolute;
-  z-index: 1;
-
-}
 .pictopanier{
 text-decoration-color: white;
 }
@@ -594,7 +580,12 @@ section .section-title {
     border-left: transparent;
     padding-bottom: 0px;
     margin-bottom: 10px;
-}
+  }
+
+  .hide-info {
+    display: none;
+  }
+
 }
 /* fin css footer */
 /* fin css Yacine------------------------------------------------------------------- */

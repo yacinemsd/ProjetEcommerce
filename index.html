@@ -15,11 +15,15 @@
 <body>
   <header>
     <!--debut du header -->
-    <div class="container-fluid bg-grey">
+    <div class="container-fluid bg-grey hide-info">
       <div class="row" id="Apropos">
-        <p class=" mb-0 texticonetop text-center"><i class="#3385d9 fas fa-search-location"></i> 1 A droite après le cratère 01010 La Lune <i class="#3385d9 far fa-clock"></i> 24h/24h - boutiqueEtrange@gmoon.com   <i class="#3385d9 fas fa-phone"></i> 01 01 01 01 01 </p>
-        <a class="header" href="#"><strong>A propos</strong></a>
-        <a class="header1" href="#"><strong>Se connecter</strong></a>
+        <div class="col-lg-8 col-sm-12">
+          <p class=" mb-0 texticonetop text-center"><i class="#3385d9 fas fa-search-location"></i> 1 A droite après le cratère 01010 La Lune <i class="#3385d9 far fa-clock"></i> 24h/24h - boutiqueEtrange@gmoon.com   <i class="#3385d9 fas fa-phone"></i> 01 01 01 01 01 </p>
+        </div>
+        <div class="col-lg-4 col-sm-12 text-right">
+          <a class="header" href="#"><strong>A propos</strong></a>
+          <a class="header1 pl-3" href="#"><strong>Se connecter</strong></a>
+        </div>
       </div>
     </div>
   </header>
@@ -33,29 +37,24 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="Elixirs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/flask.svg" alt="pictopotion"  class="margin" width="40px"/><span>Elixirs</span>
-          </a>
-
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item nav-section-1" href="#section-content-1">Potion d'amour</a>
-          <a class="dropdown-item nav-section-1" href="#section-content-1">Potion de vérité</a>
-          <a class="dropdown-item nav-section-1" href="#section-content-1">Potion d'éternité</a>
-          <a class="dropdown-item nav-section-1" href="#section-content-1">Potion de transmutation</a>
-
+          <a class="nav-link dropdown-toggle" href="#" id="Elixirs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/flask.svg" alt="pictopotion"  class="margin" width="40px"/><span>Elixirs</span></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item nav-section-1" href="#section-content-1">Potion d'amour</a>
+            <a class="dropdown-item nav-section-1" href="#section-content-1">Potion de vérité</a>
+            <a class="dropdown-item nav-section-1" href="#section-content-1">Potion d'éternité</a>
+            <a class="dropdown-item nav-section-1" href="#section-content-1">Potion de transmutation</a>
+          </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="Elixirs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img  class="margin" src="images/unicorn.svg" alt="pictocreature" width="40px"/><span>Créatures</span></a>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item nav-section-2" href="#section-content-2">Licorne</a>
-          <a class="dropdown-item nav-section-2" href="#section-content-2">Dragon</a>
-          <a class="dropdown-item nav-section-2" href="#section-content-2">Pheonix</a>
-          <a class="dropdown-item nav-section-2" href="#section-content-2">Griffon</a>
-          <a class="dropdown-item nav-section-2" href="#section-content-2">Nourriture</a>
-
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item nav-section-2" href="#section-content-2">Licorne</a>
+            <a class="dropdown-item nav-section-2" href="#section-content-2">Dragon</a>
+            <a class="dropdown-item nav-section-2" href="#section-content-2">Pheonix</a>
+            <a class="dropdown-item nav-section-2" href="#section-content-2">Griffon</a>
+            <a class="dropdown-item nav-section-2" href="#section-content-2">Nourriture</a>
+          </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -71,29 +70,25 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/witch-flying.svg" alt="pictoaccess" width="45px" class="margin" /><span>Accessoires</span></a>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item nav-section-4" href="#section-content-4">Balai magique volant</a>
-          <a class="dropdown-item nav-section-4" href="#section-content-4">Cape d'invisibilité</a>
-          <a class="dropdown-item nav-section-4" href="#section-content-4">Baguette magique</a>
-          <a class="dropdown-item nav-section-4" href="#section-content-4">Haricot magique bio</a>
-        </div>
-        <div>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item nav-section-4" href="#section-content-4">Balai magique volant</a>
+            <a class="dropdown-item nav-section-4" href="#section-content-4">Cape d'invisibilité</a>
+            <a class="dropdown-item nav-section-4" href="#section-content-4">Baguette magique</a>
+            <a class="dropdown-item nav-section-4" href="#section-content-4">Haricot magique bio</a>
+          </div>
         </li>
         <!--image du panier  -->
         <li class="nav-item active">
-          <a class="nav-link" id="panier" id="main" href="#main" data-toggle="modal" data-target="#cart"><span class="circle" id="cartQuantity">0</span><img src="images/shopping-basket.svg" class="pictopanier" alt="pictopanier" width="50px"/></a>
+          <a class="nav-link" id="main" href="#main" data-toggle="modal" data-target="#cart"><span class="circle" id="cartQuantity">0</span><img src="images/shopping-basket.svg" class="pictopanier" alt="pictopanier" width="50px"/></a>
         </li>
       </ul>
+      <!--panier  -->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2 loupe" type="search" placeholder="Rechercher" aria-label="Search">
+        <button class="btn search my-2 my-sm-0 loupe" type="submit"><img class="loupe" src="images/loupe.svg" width="20px"/></button>
+      </form>
     </div>
-    <!--panier  -->
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2 loupe" type="search" placeholder="Rechercher" aria-label="Search">
-      <button class="btn search my-2 my-sm-0 loupe" type="submit"><img class="loupe" src="images/loupe.svg" width="20px"/></button>
-    </form>
-  </div>
-</div>
-</nav>
+  </nav>
 <!--debut du caroussel  -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
