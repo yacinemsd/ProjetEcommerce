@@ -2,12 +2,9 @@
 new CBPFWTabs( document.getElementById( 'tabs' ) );
 // !partie Jonjon--------------------------------------------------------------------------------------------
 $(document).ready(function(){
-//partie se connecter--------------------------------------------------------------------------------------------
-// $function promptMessage(){
-//   prompt("identifiez-vous", "exemple : Laetitia");
-//   var connect = prompt("#header1").value;
-//   $("#header1").text(connect);
-// };
+// liens de la navbar
+
+// search
 //partie Jeffen--------------------------------------------------------------------------------------------
   // A SUPPRIMER POUR TESTER >>>>>>>
   var cartItemAdded = true;
