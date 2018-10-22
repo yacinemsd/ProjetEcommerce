@@ -608,8 +608,14 @@ section .section-title {
 .spaceFooter{
   padding: 1rem;
 }
+
+.logo2{
+  width: 75%;
+  height: 75%;
+}
+
 .logo23{
-  width: 310px;
+  width: 300px;
   height: 100px;
 }
 
@@ -623,7 +629,7 @@ section .section-title {
   .hide-info {
     display: none;
    }
-  .logo23{
+  .logo23, .logo2{
     width: 70%;
     height: 70%;
   }
