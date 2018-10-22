@@ -6,8 +6,6 @@ $(document).ready(function(){
   var cartWrapper = $('#product');
   var quantityProduct = 1;
   var subTotal, total = 0;
-  var priceInput = '';// viens de la sélection dans le panneau de commande pour les types de transformation
-  var typeInput = '';// viens de la sélection dans le panneau de commande pour les types de transformation
   var products= [
       {
         id: 0,
@@ -30,9 +28,8 @@ $(document).ready(function(){
         name: 'Potion de transmutation',
         description: 'Divers choix s’offrent à vous pour cette potion qui permet de se tranformer en l’un des animaux de la liste pour une durée de 30 minutes à 4 heures selon la dose (se référer à la notice fournie).',
         quantity: 'Flacon de 80 ml',
-        type: typeInput,
         imageUrl: 'images/transmut.png',
-        price: priceInput
+        price: 58
       },
       {
         id: 3,
@@ -198,7 +195,7 @@ $(document).ready(function(){
   };
   //supprime un ou des éléments du panier
   function deleteProductCart(){
-
+    
   }
   //fonction servant à ajouter des produits dans le panier en fonction des variables passées en paramètre
   $(".addToCartBtn").click(function(){
@@ -260,12 +257,6 @@ $(document).ready(function(){
   });
   //fin partie Jeffen--------------------------------------------------------------------------------------------
   // partie Jonjon--------------------------------------------------------------------------------------------
-
-  $( "input[type=radio]" ).on( "click",function(){
-    var choice = document.querySelector("input[name=choice]:checked").value;
-    $("#transmut").text("Prix : " + choice+" €");
-  })
-
 
   function extend( a, b ) {
     for( var key in b ) {
