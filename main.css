@@ -43,7 +43,9 @@ margin-right: 10px;
   z-index: 1;
 
 }
-
+.pictopanier{
+text-decoration-color: white;
+}
 
 .img-fluid{
   text-align: center;
@@ -443,6 +445,10 @@ input, .radio{
 }
 
 @media screen and (max-width: 32em) {
+  .loupe{
+    display: none;
+      }
+
 	.tabs nav ul,
 	.tabs nav ul li a {
 		width: 100%;
