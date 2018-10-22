@@ -1,3 +1,7 @@
+body{
+  font-family: "Krub", sans-serif;
+}
+
 /* debut du header laetitia--------------------------------------------------------------------*/
 .navbar{
   background-color: #303189;
@@ -289,13 +293,13 @@ outline: 0;
 }
 
 .mediabox img {
-	width: 50%;
-  height: 50%;
+	width: 65%;
+  height: 65%;
 	display: block;
 	margin: 0 auto;
 }
 
-#baguette, #phoenix{
+#baguette, #phoenix, #eternite, #demon, #invisible{
   margin-bottom: 50px;
 }
 .mediabox h3 {
