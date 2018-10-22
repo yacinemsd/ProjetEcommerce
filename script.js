@@ -186,16 +186,19 @@ $(document).ready(function(){
     for (i=0;i<productsInCart.length;i++){
       // Va chercher tous les prix des produits, grâce à leurs ID, dans le panier  les multiplie par leur nombre et ajoute à la variable totale
       priceByProduct = Number(products[productsInCart[i]].price)*Number($('#quantity'+productsInCart[i]).val());
-      total += priceByProduct;
-      $('#price'+productsInCart[i]).text(priceByProduct+' €');
-      quantityInCart += Number($('#quantity'+productsInCart[i]).val());
+      total += priceByProduct;// met à jour le total au fur et à mesure
+      $('#price'+productsInCart[i]).text(priceByProduct+' €');// met à jour le texte du prix
+      quantityInCart += Number($('#quantity'+productsInCart[i]).val());//
     }
     $('#cartQuantity').text(quantityInCart);
     $('#total').text(total+' €');
   };
   //supprime un ou des éléments du panier
   function deleteProductCart(){
-    
+    $(this).closest('.productAdded').remove();
+    productsInCart.splice($.inArray($('#deleteProduct').id, productsInCart));
+    updateCart();
+    // RIP petit ange parti trop tôt
   }
   //fonction servant à ajouter des produits dans le panier en fonction des variables passées en paramètre
   $(".addToCartBtn").click(function(){
@@ -206,11 +209,11 @@ $(document).ready(function(){
     var urlById = products[idProduct].imageUrl;//adresse de l'image
     var nameById = products[idProduct].name;//nom du produit
     var quantityById = products[idProduct].quantity;//quantités (flacon,pièce,etc)
-    var priceById = products[idProduct].price;
+    var priceById = products[idProduct].price;// prix
     var productAdded = document.createElement('div');//Variable servant à créer le container pour l'injection html
     //condition compare les id de l'objet cliqué s'ils existent déjà dans la liste ou si la liste de produits est vide
     if (idProduct!=productsInCart[$.inArray(idProduct, productsInCart)]||productsInCart.length==0){
-      productAdded.className = 'productAdded'+idProduct;
+      productAdded.className = 'productAdded';
       productAdded.innerHTML = `<div class="row">
                                   <div class="col-md-3">
                                     <img id="productImage" class="img-fluid mx-auto d-block image" src="${urlById}" alt="product_image"></div>
@@ -233,24 +236,24 @@ $(document).ready(function(){
                                         </div>
                                       </div>
                                     </div>
-                                    <button type="button" class="button tooltip-test" id="deleteProduct" title="Supprimer">X</button>
+                                    <button type="button" class="btnDelete button tooltip-test" id="deleteProduct" title="Supprimer">X</button>
                                   </div>
                                 <div class="dropdown-divider"></div>`;
       cartWrapper.append(productAdded);//Injection dans la page html au niveau de cartWrapper(id="product")
       quantityProduct = Number($('#quantity'+idProduct+' option:selected').text());//Récupération du nombre initial dans la sélection du nombre
       productsInCart.push(idProduct);
       $('#quantity'+idProduct).change(updateCart);// ajout de l'évènement onchange sur la dropdown list pour modifier a quantité
-      //$('#deleteProduct').click(deleteProductCart);// ajout de l'évènement click sur le bouton delete pour supprimer un produit
+      $('.btnDelete').click(deleteProductCart);// ajout de l'évènement click sur le bouton delete pour supprimer un produit
       updateCart();
     } else {
       quantityProduct++;// ajout d'un produit pour l'affichage dans le panier
       if(quantityProduct<=5){
-        $('#quantity'+idProduct).val(quantityProduct);
-        priceById = priceById*quantityProduct;
-        $('#price'+idProduct).text(priceById+' €');
-        updateCart();
+        $('#quantity'+idProduct).val(quantityProduct);// mise à jour de la valeur des dropdowns
+        priceById = priceById*quantityProduct;// mise à jour pour le total prix multiplié par la quantité
+        $('#price'+idProduct).text(priceById+' €');// mise à jour du texte par rapport à un produit
+        updateCart();// mise à jour du panier rapide
       }else{
-        quantityProduct--;
+        quantityProduct--;// retrait d'un produit pour l'affichage dans le panier
         alert('Les quantités maximales sont atteintes.');
       }
     }
