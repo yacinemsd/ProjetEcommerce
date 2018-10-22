@@ -29,15 +29,17 @@
 
 }
 .circle{
-    margin:10px;
-    width:100px;
-    background:#3385d9;
-    height:100px;
+    margin:0;
+    padding-bottom: 3px;
+    width:25px;
+    font-weight: bold;
+    background:white;
+    height:25px;
     text-align:center;
-    'moz'border-radius:100px;
+    border-radius:50px;
     position: absolute;
     z-index: 2;
-    line-height: 90px; /* 100 - 10 */
+
 }
 
 /* fin du header laetitia-----------------------------------------------------------------*/
@@ -71,11 +73,23 @@ outline: 0;
   font-size: 1.5rem;
 }
 #productImage{
+  padding-top: 2rem;
 	width: 4rem;
 	height: auto;
 }
 #quantified{
 	color: #007bff;
+}
+#deleteProduct{
+  color: red;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  height:20px;
+}
+#panier, #deleteProduct:hover{
+  cursor:pointer;
 }
 .shopping-cart .items .product{
 	margin-bottom: 20px;
