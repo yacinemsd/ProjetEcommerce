@@ -1,22 +1,26 @@
-body{
+/* debut du header laetitia--------------------------------------------------------------------*/
+body, header, footer {
   font-family: "Krub", sans-serif;
 }
 
-/* debut du header laetitia--------------------------------------------------------------------*/
+p{
+  text-align: center;
+}
+
+.margin{
+margin-right: 10px;
+
+}
 .navbar{
   background-color: #303189;
 
 }
+
 .navbar-light .navbar-nav .nav-link{
     color:#f1d145;
 }
 .navbar-light .navbar-nav .nav-link:hover{
     color:#3385d9;
-}
-.d-block{
- display: block;
- margin-left: auto;
- margin-right: auto;
 }
 
 #Apropos{
@@ -24,36 +28,66 @@ body{
   background-color: #f1d145;
   border-bottom: #303189;
 }
-.header{
-  margin-left: 330px;
+
+.pictopanier{
+text-decoration-color: white;
 }
-.header1{
-  margin-left: 30px;
+
+.img-fluid{
+  text-align: center;
 
 }
 
-#panier {
-  margin-left: 20px;
-  position: absolute;
-  z-index: 1;
+.d-block{
+margin-left: auto;
+margin-right: auto;
 
 }
+
+#carousselimages1 {
+  color: black;
+  letter-spacing: 1px;
+  font-family: fantasy;
+  font-size: 20px;
+  text-shadow: #FC0 1px 0 10px;
+}
+#carousselimages2 {
+  color: black;
+  letter-spacing: 1px;
+  font-family: fantasy;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px blue, 0 0 1em green, 0 0 0.2em pink;
+
+}
+#carousselimages3{
+  color: white;
+  letter-spacing: 1px;
+  font-family: fantasy;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px grey, 0 0 1em green, 0 0 0.2em red;
+
+}
+
+
+h5 {
+  font-family:monospace;
+  font-size: 30px;
+}
+
 .circle{
-    margin:10px;
-    width:100px;
-    background:#3385d9;
-    height:100px;
-    text-align:center;
-    'moz'border-radius:100px;
-    position: absolute;
-    z-index: 2;
-    line-height: 90px; /* 100 - 10 */
+   margin:0;
+   padding-bottom: 3px;
+   width:25px;
+   font-weight: bold;
+   background:white;
+   height:25px;
+   text-align:center;
+   border-radius:50px;
+   position: absolute;
+   z-index: 2;
+
 }
 
-/* search */
-.btn-outline-success:hover{
-  background-color: #3385d9;
-}
 /* fin du header laetitia-----------------------------------------------------------------*/
 /* Jeffen --------------------------------------------------------------------------------*/
 /* remember to define focus styles! */
@@ -64,7 +98,9 @@ outline: 0;
 .modal .modal-dialog .modal-header, .modal .modal-dialog .modal-footer {
   /* background-color: #c9e9ff; */
 }
-.btn{margin-bottom:15px;}
+.btn{
+  margin-bottom:15px;
+}
 /* /POPUP */
 .shopping-cart{
 	/* font-family: 'Montserrat', sans-serif; */
@@ -83,11 +119,26 @@ outline: 0;
   font-size: 1.5rem;
 }
 #productImage{
+  padding-top: 2rem;
 	width: 4rem;
 	height: auto;
 }
 #quantified{
 	color: #007bff;
+}
+#deleteProduct{
+  color: red;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  height:20px;
+}
+#main, #deleteProduct:hover{
+  cursor:pointer;
+}
+.form-inline, #main{
+  margin-left: 30px;
 }
 .shopping-cart .items .product{
 	margin-bottom: 20px;
@@ -95,7 +146,7 @@ outline: 0;
 	padding-bottom: 20px;
 }
 .shopping-cart .items .product .info{
-	padding-top: 0px;
+	padding-top: 0;
 	text-align: center;
 }
 .shopping-cart .items .product .info .product-name{
@@ -290,11 +341,11 @@ outline: 0;
 	float: left;
 	width: 33%;
 	padding: 0 25px;
-}
+  }
 
 .mediabox img {
-	width: 65%;
-  height: 65%;
+	width: 75%;
+  height: 75%;
 	display: block;
 	margin: 0 auto;
 }
@@ -316,8 +367,8 @@ outline: 0;
 }
 
 .modal-content img{
-width: 50%;
-height: 50%;
+width: 45%;
+height: 45%;
 margin-bottom: 25px;
 }
 
@@ -446,12 +497,25 @@ margin-left: auto;
 }
 
 #flechetop{
+
   color : #303189;
   font-size: 3rem;
+
+    position: fixed;
+    bottom: 0;
+    right: 11px;
+    z-index: 300;
+    border : solid;
+    background-color: #f1d145;
+    border-radius: 30px ;
 }
 
 #flechetop:hover{
   color: #f1d145;
+  border : solid;
+  background-color: #303189;
+  border-radius: 30px ;
+
 }
 
 /*css footer*/
@@ -541,6 +605,13 @@ section .section-title {
 
 
 }
+.spaceFooter{
+  padding: 1rem;
+}
+.logo23{
+  width: 310px;
+  height: 100px;
+}
 
 @media (max-width:767px){
 	#footer h5 {
@@ -548,7 +619,15 @@ section .section-title {
     border-left: transparent;
     padding-bottom: 0px;
     margin-bottom: 10px;
+   }
+  .hide-info {
+    display: none;
+   }
+  .logo23{
+    width: 70%;
+    height: 70%;
+  }
 }
-}
+
 /* fin css footer */
 /* fin css Yacine------------------------------------------------------------------- */
