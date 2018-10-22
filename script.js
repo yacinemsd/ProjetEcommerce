@@ -261,6 +261,12 @@ $(document).ready(function(){
   //fin partie Jeffen--------------------------------------------------------------------------------------------
   // partie Jonjon--------------------------------------------------------------------------------------------
 
+  $( "input[type=radio]" ).on( "click",function(){
+    var choice = document.querySelector("input[name=choice]:checked").value;
+    $("#transmut").text("Prix : " + choice+" €");
+  })
+
+
   function extend( a, b ) {
     for( var key in b ) {
       if( b.hasOwnProperty( key ) ) {
@@ -319,10 +325,79 @@ $(document).ready(function(){
   //Fin Jonjon--------------------------------------------------------------------------------------------
   window.CBPFWTabs = CBPFWTabs;
   // fin partie Jonjon
+  ////////////////////////////////////////////////////////
+$("a.nav-section-4").click(function(){ // function au click sur la nav section 4
+ // tab
+ $("#tab-section-4").addClass("tab-current");
+ $("#tab-section-1").removeClass("tab-current");
+ $("#tab-section-2").removeClass("tab-current");
+ $("#tab-section-3").removeClass("tab-current");
+
+ // contenu
+ $("#section-content-4").addClass("content-current");
+ $("#section-content-1").removeClass("content-current");
+ $("#section-content-2").removeClass("content-current");
+ $("#section-content-3").removeClass("content-current");
+
+});
+
+$("a.nav-section-1").click(function(){ // function au click sur la nav section 1
+
+ $("#tab-section-1").addClass("tab-current");
+ $("#tab-section-2").removeClass("tab-current");
+ $("#tab-section-3").removeClass("tab-current");
+ $("#tab-section-4").removeClass("tab-current");
+
+ $("#section-content-1").addClass("content-current");
+ $("#section-content-2").removeClass("content-current");
+ $("#section-content-3").removeClass("content-current");
+ $("#section-content-4").removeClass("content-current");
+
+});
+
+$("a.nav-section-2").click(function(){
+
+ $("#tab-section-2").addClass("tab-current");
+ $("#tab-section-1").removeClass("tab-current");
+ $("#tab-section-3").removeClass("tab-current");
+ $("#tab-section-4").removeClass("tab-current");
+
+ $("#section-content-2").addClass("content-current");
+ $("#section-content-1").removeClass("content-current");
+ $("#section-content-3").removeClass("content-current");
+ $("#section-content-4").removeClass("content-current");
+
+});
+
+$("a.nav-section-3").click(function(){
+
+ $("#tab-section-3").addClass("tab-current");
+ $("#tab-section-4").addClass("tab-current");
+ $("#tab-section-1").addClass("tab-current");
+ $("#tab-section-2").addClass("tab-current");
+
+ $("#section-content-3").addClass("content-current");
+ $("#section-content-4").removeClass("content-current");
+ $("#section-content-1").removeClass("content-current");
+ $("#section-content-2").removeClass("content-current");
+
+});
   //début partie Yacine--------------------------------------------------------------------------------------------
   // ===== Scroll haut de page ====
   $("#lientop").click(function(){
     $("html, body").animate({scrollTop: 0},"slow");
   });
+  // scroll fixed flechetop
+  var positionElementInPage = $('#flechetop').offset().top;
+  $(window).scroll(
+    function() {
+      if ($(window).scrollTop() <= positionElementInPage) {
+        // fixed
+        $('#flechetop').hide();
+      }else{
+        $('#flechetop').show();
+      }
+    }
+  );
   //fin partie Yacine--------------------------------------------------------------------------------------------
 });

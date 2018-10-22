@@ -1,44 +1,90 @@
 /* debut du header laetitia--------------------------------------------------------------------*/
+body header footer {
+  font-family: "Krub", sans-serif;
+}
+
+p{
+  text-align: center;
+}
+
+.margin{
+margin-right: 10px;
+
+}
 .navbar{
   background-color: #303189;
 
 }
+
 .navbar-light .navbar-nav .nav-link{
     color:#f1d145;
 }
 .navbar-light .navbar-nav .nav-link:hover{
     color:#3385d9;
 }
+
 #Apropos{
   height: 30px;
   background-color: #f1d145;
   border-bottom: #303189;
 }
-.header{
-  margin-left: 330px;
+
+.pictopanier{
+text-decoration-color: white;
 }
-.header1{
-  margin-left: 30px;
+
+.img-fluid{
+  text-align: center;
 
 }
 
-#panier {
-  margin-left: 20px;
-  position: absolute;
-  z-index: 1;
+.d-block{
+margin-left: auto;
+margin-right: auto;
 
 }
+
+#carousselimages1 {
+  color: black;
+  letter-spacing: 1px;
+  font-family: fantasy;
+  font-size: 20px;
+  text-shadow: #FC0 1px 0 10px;
+}
+#carousselimages2 {
+  color: black;
+  letter-spacing: 1px;
+  font-family: fantasy;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px blue, 0 0 1em green, 0 0 0.2em pink;
+
+}
+#carousselimages3{
+  color: white;
+  letter-spacing: 1px;
+  font-family: fantasy;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px grey, 0 0 1em green, 0 0 0.2em red;
+
+}
+
+
+h5 {
+  font-family:monospace;
+  font-size: 30px;
+}
+
 .circle{
-    margin:0;
-    padding-bottom: 3px;
-    width:25px;
-    font-weight: bold;
-    background:white;
-    height:25px;
-    text-align:center;
-    border-radius:50px;
-    position: absolute;
-    z-index: 2;
+   margin:0;
+   padding-bottom: 3px;
+   width:25px;
+   font-weight: bold;
+   background:white;
+   height:25px;
+   text-align:center;
+   border-radius:50px;
+   position: absolute;
+   z-index: 2;
 
 }
 
@@ -88,7 +134,7 @@ outline: 0;
   background-color: white;
   height:20px;
 }
-#panier, #deleteProduct:hover{
+#main, #deleteProduct:hover{
   cursor:pointer;
 }
 .shopping-cart .items .product{
@@ -252,7 +298,6 @@ outline: 0;
 	text-transform: none;
 	font-weight: normal;
 	font-variant: normal;
-	font-family: 'icomoon';
 	line-height: 1;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
@@ -296,12 +341,15 @@ outline: 0;
 }
 
 .mediabox img {
-	width: 40%;
-  height: 40%;
+	width: 65%;
+  height: 65%;
 	display: block;
 	margin: 0 auto;
 }
 
+#baguette, #phoenix, #eternite, #demon, #invisible{
+  margin-bottom: 50px;
+}
 .mediabox h3 {
 	margin: 0.75em 0 0.5em;
   text-align: center;
@@ -316,8 +364,8 @@ outline: 0;
 }
 
 .modal-content img{
-width: 25%;
-height: 25%;
+width: 50%;
+height: 50%;
 margin-bottom: 25px;
 }
 
@@ -346,7 +394,11 @@ input, .radio{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+#chat, #chauvesouris, #rat, #dragon{
+  margin-bottom: 2px;
 }
 
 .picto{
@@ -357,7 +409,7 @@ input, .radio{
 /* Example media queries */
 
 @media screen and (max-width: 52.375em) {
-	.tabs nav a span {
+	.title {
 		display: none;
 	}
 
@@ -442,12 +494,25 @@ margin-left: auto;
 }
 
 #flechetop{
+
   color : #303189;
   font-size: 3rem;
+
+    position: fixed;
+    bottom: 0;
+    right: 11px;
+    z-index: 300;
+    border : solid;
+    background-color: #f1d145;
+    border-radius: 30px ;
 }
 
 #flechetop:hover{
   color: #f1d145;
+  border : solid;
+  background-color: #303189;
+  border-radius: 30px ;
+
 }
 
 /*css footer*/
@@ -537,6 +602,13 @@ section .section-title {
 
 
 }
+.spaceFooter{
+  padding: 1rem;
+}
+.logo23{
+  width: 310px;
+  height: 100px;
+}
 
 @media (max-width:767px){
 	#footer h5 {
@@ -545,6 +617,10 @@ section .section-title {
     padding-bottom: 0px;
     margin-bottom: 10px;
 }
+.hide-info {
+    display: none;
+  }
 }
+
 /* fin css footer */
 /* fin css Yacine------------------------------------------------------------------- */
